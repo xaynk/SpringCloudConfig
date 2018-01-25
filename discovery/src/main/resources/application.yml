@@ -1,0 +1,17 @@
+server:
+  port: 8889
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+     defaultZone: http://localhost:8889/eureka/
+    server:
+      waitTimeInMsWhenSyncEmpty: 5
+
+
+
+

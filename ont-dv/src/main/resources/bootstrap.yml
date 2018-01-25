@@ -3,9 +3,16 @@ spring:
     name: ont-dv
   cloud:
     config:
-      # App service pointing to Config-Server directly
-      uri: http://${CONFIG_URL:localhost}:8888
+      enabled: true
+      failFast: true
+      discovery:
+        service-id: config-server
+        enabled: false
 
 management:
   security:
     enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/

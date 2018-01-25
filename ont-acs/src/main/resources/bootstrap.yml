@@ -3,9 +3,17 @@ spring:
     name: ont-acs
   cloud:
     config:
-      # App service pointing to Config-Server directly
-      uri: http://${CONFIG_URL:localhost}:8888
+      enabled: true
+      failFast: true
+      discovery:
+        enabled: true
+        # App service pointing to Config-Server bypassing Discovery-Server
+        serviceId: config-server
 
 management:
   security:
     enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
