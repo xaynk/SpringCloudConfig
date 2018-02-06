@@ -1,14 +1,15 @@
 spring:
   application:
     name: ont-acs
+  profiles:
+    active: DC2
   cloud:
     config:
       enabled: true
       failFast: true
       discovery:
-        enabled: true
-        # App service pointing to Config-Server bypassing Discovery-Server
-        serviceId: config-server
+        service-id: config-server
+        enabled: false
 
 management:
   security:

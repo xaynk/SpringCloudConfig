@@ -20,13 +20,16 @@ import java.io.IOException;
 
 @RefreshScope
 @RestController
-public class DvController {
+public class AcsDC2Controller {
 
     @Value("${version: default}")
     private String componentVersion;
 
     @Value("${component.name: default}")
     private String componentName;
+
+    @Value("${location: default}")
+    private String componentLocation;
 
 //    @Autowired
 //    private RestTemplate restTemplate;
@@ -36,13 +39,18 @@ public class DvController {
     private EurekaClient eurekaClient;
 
     @RequestMapping("/version")
-    public String getComponentVersionDv() {
+    public String getComponentVersionDC2() {
         return this.componentVersion;
     }
 
     @RequestMapping("/name")
-    public String getComponentNameDv() {
+    public String getComponentNameDC2() {
         return this.componentName;
+    }
+
+    @RequestMapping("/loc")
+    public String getComponentLocDC2() {
+        return this.componentLocation;
     }
 
 //    @RequestMapping("/getAcs")

@@ -1,13 +1,14 @@
 spring:
   application:
-    name: ont-dv
+    name: ont-acs-dc2
   cloud:
     config:
       enabled: true
       failFast: true
       discovery:
-        service-id: config-server
-        enabled: false
+        enabled: true
+        # App service pointing to Config-Server bypassing Discovery-Server
+        serviceId: config-server
 
 management:
   security:

@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class AcsConfiguration {
+public class AcsDC1Configuration {
 
     public static void main(String[] args) {
-        SpringApplication.run(AcsConfiguration.class, args);
+        SpringApplication.run(AcsDC1Configuration.class, args);
     }
 }

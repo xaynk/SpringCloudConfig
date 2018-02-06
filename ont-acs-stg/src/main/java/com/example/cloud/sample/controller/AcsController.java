@@ -15,14 +15,22 @@ public class AcsController {
     @Value("${component.name: default}")
     private String componentName;
 
+    @Value("${location: default}")
+    private String componentLoc;
+
     @RequestMapping("/version")
-    public String getComponentVersionAcs() {
+    public String getComponentVersionAcsDC1() {
         return this.componentVersion;
     }
 
     @RequestMapping("/name")
-    public String getComponentNameAcs() {
+    public String getComponentNameAcsDC1() {
         return this.componentName;
+    }
+
+    @RequestMapping("/loc")
+    public String getComponentLocAcsDC1() {
+        return this.componentLoc;
     }
 }
 
